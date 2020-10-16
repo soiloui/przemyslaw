@@ -6,6 +6,14 @@
 	box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+.body {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
 body {
 	font-family: 'Raleway', sans-serif;
 	line-height: 1.5;
@@ -22,10 +30,10 @@ $col-one: #fff;
 $col-thr: #00a6fb;
 $col-fou: #ebebeb;
 
-@mixin hover-bgLighten {
+@mixin hover-bgLighten($alpha: 0.3) {
 	transition: background 0.25s ease-out;
 	&:hover {
-		background: rgba(#fff, 0.3);
+		background: rgba(#fff, $alpha);
 	}
 }
 

@@ -36,6 +36,11 @@ header {
 	position: relative;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+}
+.text-box__content {
+	display: flex;
+	align-items: center;
 	justify-content: center;
 	padding: 2.5em;
 	min-height: 30vh;
@@ -52,6 +57,44 @@ header {
 }
 .text-box__item--active {
 	display: block;
+}
+
+.text-box__move {
+	position: absolute;
+	top: 50%;
+	left: -10%;
+	height: 70px;
+	width: 50px;
+
+	background: rgba($col-one, 0.3);
+	border-radius: 6px;
+
+	transform: translateY(-50%) rotate(180deg);
+	cursor: pointer;
+
+	@include hover-bgLighten(0.6);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 10px;
+		height: 100%;
+
+		background: rgba($col-one, 0.5);
+
+		transform: translateY(-50%);
+	}
+
+	&--next {
+		left: unset;
+		right: -10%;
+		&::before {
+			left: unset;
+			right: 0;
+		}
+	}
 }
 
 h1 {
