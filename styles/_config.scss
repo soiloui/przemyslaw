@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	line-height: 1.5;
+}
+img {
+	width: 100%;
+}
+ul {
+	list-style: none;
+}
+
+$col-two: #003049;
+$col-one: #fff;
+$col-thr: #00a6fb;
+$col-fou: #ebebeb;
+
+@mixin hover-bgLighten {
+	transition: background 0.25s ease-out;
+	&:hover {
+		background: rgba(#fff, 0.3);
+	}
+}
+
+@mixin fadeInMixin($time: 1.4s) {
+	animation-name: fadeIn;
+	animation-timing-function: ease-in-out;
+	animation-duration: $time;
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}
+
+@mixin moveUpMixin($time: 1.6s, $y: 14%, $name: moveUp) {
+	animation-name: $name;
+	animation-duration: $time;
+	animation-timing-function: ease-in-out;
+
+	@keyframes #{$name} {
+		from {
+			transform: translateY($y);
+		}
+		to {
+			transform: translateY(0);
+		}
+	}
+}
