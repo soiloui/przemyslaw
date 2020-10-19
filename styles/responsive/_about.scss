@@ -1,0 +1,42 @@
+@media (min-width: 10px) and (max-width: 600px) {
+	.sidebyside {
+		& > :nth-child(odd) {
+			flex-direction: column-reverse;
+		}
+	}
+	.sidebyside__item {
+		flex-direction: column;
+		margin-bottom: 100px;
+
+		&::before {
+			left: 5%;
+			width: 90%;
+			height: 80%;
+			z-index: -1;
+
+			background: rgba($col-thr, 0.1);
+		}
+	}
+	.sidebyside {
+		& > :nth-child(even) {
+			&::before {
+				left: 5%;
+			}
+		}
+	}
+
+	.sidebyside__text,
+	.sidebyside__image {
+		width: 100%;
+	}
+
+	.sidebyside__image {
+		margin-bottom: 1.5em;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+	.sidebyside__item {
+		margin-bottom: 120px;
+	}
+}

@@ -1,0 +1,25 @@
+@media (min-width: 10px) and (max-width: 600px) {
+	.opinions-wrapper {
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.opinion {
+		padding: 1em;
+		margin-bottom: 60px;
+		width: 100%;
+	}
+
+	.opinion__image {
+		height: 150px;
+		width: 150px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+	.opinion__image {
+		height: 150px;
+		width: 150px;
+	}
+}

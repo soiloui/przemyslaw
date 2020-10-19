@@ -1,0 +1,10 @@
+@media (min-width: 10px) and (max-width: 600px) {
+	.contact-links {
+		flex-direction: column;
+		align-items: center;
+	}
+	.contact-link {
+		margin-bottom: 3em;
+		width: 100%;
+	}
+}

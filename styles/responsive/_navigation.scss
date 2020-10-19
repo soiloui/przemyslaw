@@ -1,0 +1,27 @@
+@media (min-width: 10px) and (max-width: 600px) {
+	.navigation {
+		flex-direction: column;
+		justify-content: flex-start;
+		height: 100vh;
+
+		background-color: rgba($col-two, 1);
+		transform: translateX(100%);
+
+		&--active {
+			transform: translateX(0);
+		}
+	}
+	.navigation__list {
+		flex-direction: column;
+		align-items: center;
+	}
+	.navigation__logo {
+		margin: 1.5em;
+	}
+	.navigation__item {
+		margin-bottom: 1em;
+		width: 100vw;
+
+		font-size: 1.2rem;
+	}
+}
