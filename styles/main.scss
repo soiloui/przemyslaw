@@ -4,6 +4,7 @@
 @import 'about';
 @import 'opinions';
 @import '_bgAnim';
+@import 'contact';
 
 section {
 	display: flex;
@@ -41,5 +42,11 @@ section {
 	color: rgba(#fff, 0.3);
 
 	z-index: 2;
+	cursor: pointer;
+	transition: color 0.24s ease-out;
 	@include moveUpMixin(1.6s, 100%);
+
+	&:hover {
+		color: rgba(#fff, 0.7);
+	}
 }

@@ -11,3 +11,4 @@ ScrollReveal({
 ScrollReveal().reveal('.main-wrapper');
 ScrollReveal().reveal('.sidebyside__item');
 ScrollReveal().reveal('.opinion');
+ScrollReveal().reveal('.contact-link');
