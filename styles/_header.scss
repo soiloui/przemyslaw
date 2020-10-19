@@ -20,15 +20,7 @@ header {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: rgba($col-two, 0.8);
-	}
-
-	.main-wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		@include moveUpMixin();
+		background: rgba($col-two, 0.85);
 	}
 }
 
@@ -42,14 +34,14 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 2.5em;
-	min-height: 30vh;
+	padding: 2em;
+
 	height: fit-content;
 
 	text-align: justify;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	color: $col-two;
-	background: rgba($col-one, 0.5);
+	background: rgba($col-one, 0.6);
 	border-radius: 5px;
 }
 .text-box__item {
@@ -64,7 +56,7 @@ header {
 	top: 50%;
 	left: -10%;
 	height: 70px;
-	width: 50px;
+	width: 36px;
 
 	background: rgba($col-one, 0.3);
 	border-radius: 6px;
@@ -79,7 +71,7 @@ header {
 		position: absolute;
 		top: 50%;
 		left: 0;
-		width: 10px;
+		width: 6px;
 		height: 100%;
 
 		background: rgba($col-one, 0.5);
@@ -98,8 +90,8 @@ header {
 }
 
 h1 {
-	position: absolute;
-	bottom: 0.3em;
+	// position: absolute;
+	// bottom: 0.3em;
 
 	text-align: center;
 	font-weight: 200;

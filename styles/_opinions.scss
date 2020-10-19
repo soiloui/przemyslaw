@@ -1,0 +1,38 @@
+.opinions {
+	position: relative;
+	color: $col-one;
+}
+.opinions-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.opinion {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em;
+	margin-bottom: 3em;
+	width: 45%;
+
+	text-align: center;
+	background: rgba($col-two, 0.7);
+	border: 2px solid $col-one;
+	border-radius: 6px;
+
+	h3 {
+		margin-top: 1em;
+		margin-bottom: 0.5em;
+		text-transform: capitalize;
+	}
+}
+.opinion__image {
+	height: 200px;
+	width: 200px;
+
+	object-fit: cover;
+	object-position: top center;
+	border-radius: 50%;
+	box-shadow: 10px 10px 20px rgba(#000, 0.25);
+}
