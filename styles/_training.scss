@@ -31,7 +31,14 @@
 		background: rgba($col-thr, 0.1);
 	}
 
+	.main-wrapper {
+		flex-grow: 1;
+	}
+
 	p {
 		padding-bottom: 3em;
 	}
+}
+.training__texts {
+	flex-grow: 1;
 }
