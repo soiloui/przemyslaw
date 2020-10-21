@@ -111,7 +111,6 @@ section {
 	z-index: 2;
 	cursor: pointer;
 	transition: color 0.24s ease-out;
-	@include moveUpMixin(1.6s, 100%);
 
 	&:hover {
 		color: rgba(#fff, 0.7);

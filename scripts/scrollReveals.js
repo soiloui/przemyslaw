@@ -6,6 +6,9 @@ const scrollReveals = () => {
 		opacity: 0,
 	});
 
+	ScrollReveal().reveal('.section-arrow');
+	ScrollReveal().reveal('.primary-button');
+
 	ScrollReveal().reveal('.main-wrapper');
 	ScrollReveal().reveal('.sidebyside__item');
 	ScrollReveal().reveal('.coop-group');
