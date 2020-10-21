@@ -4,7 +4,6 @@ header {
 	flex-direction: column;
 	align-items: center;
 	min-height: 100vh;
-	padding-bottom: 100px;
 
 	color: $col-one;
 	background: $col-one;
@@ -26,16 +25,14 @@ header {
 	}
 
 	.main-wrapper {
-		width: 90%;
+		border: 1px solid #000;
+	}
+
+	.text-box {
+		border: 1px solid #000;
 	}
 
 	.primary-button {
-		margin-top: 20px;
-		font-size: 1.1rem;
-
-		color: #fff;
-		background: transparent;
-		border: 2px solid #fff;
 	}
 }
 
@@ -56,68 +53,63 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 350px;
+	min-height: 350px;
 	max-width: 900px;
 }
-
-.text-box__move {
-	margin: 1em;
-
-	transform: rotate(90deg);
-	transition: color 0.24s ease-out;
-	cursor: pointer;
-
-	font-size: 2.5rem;
-	color: rgba($col-one, 0.3);
-	border-radius: 50%;
-
-	&--next {
-		transform: rotate(-90deg);
-	}
-
-	&:hover {
-		color: rgba(#fff, 0.7);
-	}
-}
-
 .text-box__content {
-	padding: 1.5em 2em;
-	width: auto;
-	max-height: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2em;
+	height: fit-content;
 
 	text-align: justify;
 	font-size: 1.5rem;
 	color: $col-two;
 	background: rgba($col-one, 0.6);
 	border-radius: 5px;
-
-	overflow-y: auto;
-
-	&::-webkit-scrollbar {
-		width: 24px;
-		height: 18px;
-	}
-	&::-webkit-scrollbar-thumb {
-		height: 6px;
-		border: 9px solid rgba(0, 0, 0, 0);
-		background-clip: padding-box;
-		border-radius: 10px;
-		-webkit-border-radius: 10px;
-		background-color: rgba($col-two, 0.85);
-	}
-
-	&::-webkit-scrollbar-button {
-		width: 0;
-		height: 0;
-		display: none;
-	}
-	&::-webkit-scrollbar-corner {
-		background-color: transparent;
-	}
 }
 .text-box__item {
 	display: none;
 }
 .text-box__item--active {
 	display: block;
+}
+
+.text-box__move {
+	position: absolute;
+	top: 50%;
+	left: -10%;
+	height: 70px;
+	width: 36px;
+
+	background: rgba($col-one, 0.3);
+	border-radius: 6px;
+
+	transform: translateY(-50%) rotate(180deg);
+	cursor: pointer;
+
+	@include hover-bgLighten(0.6);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 6px;
+		height: 100%;
+
+		background: rgba($col-one, 0.5);
+
+		transform: translateY(-50%);
+	}
+
+	&--next {
+		left: unset;
+		right: -10%;
+		&::before {
+			left: unset;
+			right: 0;
+		}
+	}
 }

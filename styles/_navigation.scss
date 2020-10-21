@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
 .navigation {
 	position: fixed;
 	display: flex;
@@ -14,8 +16,18 @@
 .navigation__logo {
 	padding: 0 0.7em;
 
+	color: $col-thr;
+	font-family: 'Krona One', sans-serif;
 	font-size: 1.5rem;
 	font-weight: 700;
+
+	span {
+		display: inline-block;
+		margin-left: 2px;
+		transform: scale(1);
+
+		color: $col-one;
+	}
 }
 
 .navigation__list {

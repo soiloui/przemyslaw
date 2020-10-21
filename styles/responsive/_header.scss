@@ -6,33 +6,27 @@
 	h1 {
 		padding: 0;
 		margin-top: 1em;
-		margin-bottom: 3em;
+		margin-bottom: 2em;
 
 		font-size: 2.4rem;
 		text-shadow: 25px 14px rgba(#fff, 0.07);
 	}
 
 	.text-box {
-		min-height: 300px;
+		min-height: fit-content;
+		flex-flow: row wrap;
 	}
 	.text-box__content {
 		padding: 1em;
+		height: 300px;
 		font-size: 1.4rem;
 	}
 
 	.text-box__move {
-		position: absolute;
-		top: unset;
-		bottom: -20px;
-		left: 10%;
-		height: 50px;
-		width: 36px;
-
-		transform: translateY(100%) rotate(180deg);
+		order: 1;
 
 		&--next {
-			left: unset;
-			right: 10%;
+			order: 2;
 		}
 	}
 }

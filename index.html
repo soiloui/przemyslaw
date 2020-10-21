@@ -49,25 +49,25 @@
 			<div class="hamburger"></div>
 		</div>
 		<nav class="navigation">
-			<a href="#header" class="navigation__logo">PK</a>
+			<a href="#header" class="navigation__logo local_link">P<span>K</span></a>
 			<ul class="navigation__list">
 				<li class="navigation__item">
-					<a href="#header">home</a>
+					<a href="#header" class="local_link">home</a>
 				</li>
 				<li class="navigation__item">
-					<a href="#about">kim jestem?</a>
+					<a href="#about" class="local_link">kim jestem?</a>
 				</li>
 				<li class="navigation__item">
-					<a href="#cooperate">współpraca online</a>
+					<a href="#cooperate" class="local_link">współpraca online</a>
 				</li>
 				<li class="navigation__item">
-					<a href="#training">szkolenia</a>
+					<a href="#training" class="local_link">szkolenia</a>
 				</li>
 				<li class="navigation__item">
-					<a href="#opinions">opinie</a>
+					<a href="#opinions" class="local_link">opinie</a>
 				</li>
 				<li class="navigation__item">
-					<a href="#contact">kontakt</a>
+					<a href="#contact" class="local_link">kontakt</a>
 				</li>
 			</ul>
 		</nav>
@@ -76,13 +76,16 @@
 			<div class="main-wrapper">
 				<h1>Przemysław Kiraga</h1>
 				<div class="text-box">
-					<div class="text-box__move"></div>
+					<i class="fas fa-chevron-circle-down text-box__move"></i>
 					<div class="text-box__content">
 						<p class="text-box__item text-box__item--active">
 							1. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 							Doloribus minima deleniti et eligendi esse odio, reiciendis
 							aliquid aut reprehenderit corrupti impedit ipsa, temporibus ad
-							dicta pariatur neque dolores beatae voluptatibus.
+							dicta pariatur neque dolores beatae voluptatibus. reiciendis.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+							ducimus. Aut odit animi repellendus excepturi itaque blanditiis
+							nostrum tempora.
 						</p>
 						<p class="text-box__item">
 							2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
@@ -98,10 +101,16 @@
 							similique. Totam?
 						</p>
 					</div>
-					<div class="text-box__move text-box__move--next"></div>
+					<i
+						class="fas fa-chevron-circle-down text-box__move text-box__move--next"
+					></i>
 				</div>
+
+				<button class="primary-button primary-button--white">
+					<span>Współpraca</span>
+				</button>
 			</div>
-			<a href="#about" class="section-arrow">
+			<a href="#about" class="section-arrow local_link">
 				<i class="fas fa-chevron-circle-down"></i>
 			</a>
 		</header>

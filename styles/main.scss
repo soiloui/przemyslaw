@@ -50,6 +50,10 @@ section {
 		color: $col-one;
 		background: $col-two;
 	}
+	&--white {
+		color: $col-two;
+		background: $col-one;
+	}
 
 	&::before {
 		content: '';

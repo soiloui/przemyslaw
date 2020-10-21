@@ -9,3 +9,11 @@ hamburger_DIV.addEventListener('click', () => {
 	hamburger_DIV.classList.toggle('hamburger-wrapper--active');
 	navigation_NAV.classList.toggle('navigation--active');
 });
+
+const localLinks_A = document.querySelectorAll('.local_link');
+localLinks_A.forEach((link) => {
+	link.addEventListener('click', () => {
+		hamburger_DIV.classList.remove('hamburger-wrapper--active');
+		navigation_NAV.classList.remove('navigation--active');
+	});
+});
