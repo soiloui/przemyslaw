@@ -1,14 +1,11 @@
 import { textBox } from './textBox.js';
+import { scrollReveals } from './scrollReveals.js';
 textBox();
+scrollReveals();
 
-ScrollReveal({
-	delay: 200,
-	duration: 1500,
-	distance: '100px',
-	opacity: 0,
+const hamburger_DIV = document.querySelector('.hamburger-wrapper');
+const navigation_NAV = document.querySelector('.navigation');
+hamburger_DIV.addEventListener('click', () => {
+	hamburger_DIV.classList.toggle('hamburger-wrapper--active');
+	navigation_NAV.classList.toggle('navigation--active');
 });
-
-ScrollReveal().reveal('.main-wrapper');
-ScrollReveal().reveal('.sidebyside__item');
-ScrollReveal().reveal('.opinion');
-ScrollReveal().reveal('.contact-link');

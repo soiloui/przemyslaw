@@ -45,17 +45,34 @@
 				<a href="#">upgrade your browser</a> to improve your experience.
 			</p>
 		<![endif]-->
+		<div class="hamburger-wrapper">
+			<div class="hamburger"></div>
+		</div>
 		<nav class="navigation">
-			<img class="navigation__logo" src="./assets/img/logo.png" alt="logo" />
+			<a href="#header" class="navigation__logo">PK</a>
 			<ul class="navigation__list">
-				<li class="navigation__item">home</li>
-				<li class="navigation__item">o mnie</li>
-				<li class="navigation__item">opinie</li>
-				<li class="navigation__item">kontakt</li>
+				<li class="navigation__item">
+					<a href="#header">home</a>
+				</li>
+				<li class="navigation__item">
+					<a href="#about">kim jestem?</a>
+				</li>
+				<li class="navigation__item">
+					<a href="#cooperate">współpraca online</a>
+				</li>
+				<li class="navigation__item">
+					<a href="#training">szkolenia</a>
+				</li>
+				<li class="navigation__item">
+					<a href="#opinions">opinie</a>
+				</li>
+				<li class="navigation__item">
+					<a href="#contact">kontakt</a>
+				</li>
 			</ul>
 		</nav>
 
-		<header>
+		<header id="header">
 			<div class="main-wrapper">
 				<h1>Przemysław Kiraga</h1>
 				<div class="text-box">
@@ -84,13 +101,15 @@
 					<div class="text-box__move text-box__move--next"></div>
 				</div>
 			</div>
-			<i class="fas fa-chevron-circle-down section-arrow"></i>
+			<a href="#about" class="section-arrow">
+				<i class="fas fa-chevron-circle-down"></i>
+			</a>
 		</header>
 
 		<main>
-			<section class="about">
+			<section class="about" id="about">
 				<div class="main-wrapper">
-					<h2>O mnie</h2>
+					<h2>kim jestem?</h2>
 					<div class="sidebyside">
 						<div class="sidebyside__item">
 							<p class="sidebyside__text">
@@ -134,7 +153,84 @@
 				</div>
 			</section>
 
-			<section class="opinions">
+			<section class="cooperate" id="cooperate">
+				<div class="main-wrapper">
+					<h2>współpraca online</h2>
+					<div class="coop-group">
+						<i class="fas fa-brain"></i>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+							ab voluptatum aperiam quae velit. Sunt vel, quo illo iusto nisi
+							aperiam voluptatum sint consequuntur distinctio in molestias
+							deleniti velit temporibus. Quos, aspernatur cumque. Maiores
+							praesentium optio voluptatum sint, fuga aspernatur. Vel aspernatur
+							consequatur, quisquam magnam unde illum dicta tenetur et?
+						</p>
+					</div>
+
+					<div class="coop-group">
+						<i class="fas fa-chess"></i>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero,
+							minus! Aliquid, ratione ea magni nam quasi rerum ut maiores
+							laborum necessitatibus sint similique expedita assumenda sequi
+							esse dicta repellendus amet blanditiis doloribus placeat
+							aspernatur eius excepturi ex iure sed! Corporis et illum quae.
+							Dolore, assumenda. Corrupti deserunt asperiores deleniti
+							excepturi!
+						</p>
+					</div>
+
+					<div class="coop-group">
+						<i class="fas fa-chart-pie"></i>
+						<p>
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+							quam voluptatibus debitis, quod voluptates delectus atque omnis
+							est deleniti obcaecati nam natus officiis necessitatibus explicabo
+							excepturi quaerat quas voluptatum totam? Lorem ipsum dolor sit
+							amet consectetur adipisicing elit. Minus eos praesentium, earum
+							fuga reprehenderit id officia sapiente maxime, voluptates
+							voluptatibus deleniti aliquid iure quas ipsum distinctio, omnis
+							tempore dolorem placeat.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="training" id="training">
+				<div class="main-wrapper">
+					<h2>szkolenia</h2>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ab
+						voluptatum aperiam quae velit. Sunt vel, quo illo iusto nisi aperiam
+						voluptatum sint consequuntur distinctio in molestias deleniti velit
+						temporibus. Quos, aspernatur cumque. Maiores praesentium optio
+						voluptatum sint, fuga aspernatur. Vel aspernatur consequatur,
+						quisquam magnam unde illum dicta tenetur et?
+					</p>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ab
+						voluptatum aperiam quae velit. Sunt vel, quo illo iusto nisi aperiam
+						voluptatum sint consequuntur distinctio in molestias deleniti velit
+						temporibus. Quos, aspernatur cumque. Maiores praesentium optio
+						voluptatum sint, fuga aspernatur. Vel aspernatur consequatur,
+						quisquam magnam unde illum dicta tenetur et?
+					</p>
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo
+						commodi at dignissimos error eum corporis natus velit iusto dolorum,
+						atque debitis aliquid nulla aperiam soluta vel animi? Rem corrupti
+						consequuntur sed? Rerum, nesciunt totam sed molestias hic nihil
+						repudiandae quod, optio temporibus veniam distinctio, quo voluptas
+						in porro doloribus ipsum?
+					</p>
+					<button class="primary-button primary-button--blue">
+						<span>Zapisz się</span>
+					</button>
+				</div>
+			</section>
+
+			<section class="opinions" id="opinions">
 				<div class="background">
 					<span></span>
 					<span></span>
@@ -228,21 +324,44 @@
 				</div>
 			</section>
 
-			<section class="contact">
+			<section class="contact" id="contact">
+				<h2>kontakt</h2>
 				<div class="main-wrapper">
-					<h2>kontakt</h2>
+					<form class="contact-form">
+						<div class="form-group">
+							<label for="name">imię</label>
+							<input type="text" name="name" id="name" required />
+						</div>
+
+						<div class="form-group">
+							<label for="email">email</label>
+							<input type="email" name="email" id="email" required />
+						</div>
+
+						<div class="form-group">
+							<label for="message">wiadomość</label>
+							<textarea
+								name="message"
+								id="message"
+								maxlength="800"
+								rows="4"
+								cols="1"
+								required
+							></textarea>
+						</div>
+
+						<button type="submit" class="primary-button primary-button--blue">
+							<span>Wyślij</span>
+						</button>
+					</form>
+
 					<div class="contact-links">
-						<a href="mailto:email@example.com" class="contact-link">
-							<i class="fas fa-envelope-square"></i>
-							<h4>Napisz do mnie</h4>
-						</a>
 						<a
-							href="https://www.facebook.com/przemek.kiraga"
+							href="https://www.facebook.com/strona.przemyslaw.kiraga"
 							target="_blank"
 							class="contact-link"
 						>
 							<i class="fab fa-facebook-square"></i>
-							<h4>Sprawdź na facebooku</h4>
 						</a>
 						<a
 							href="https://www.instagram.com/przemyslaw.kiraga/"
@@ -250,13 +369,13 @@
 							class="contact-link"
 						>
 							<i class="fab fa-instagram-square"></i>
-							<h4>Zobacz instagram</h4>
 						</a>
 					</div>
 				</div>
 			</section>
 		</main>
 
+		<script src="./scripts/zenscroll-min.js"></script>
 		<script src="./scripts/main.js" type="module" async defer></script>
 	</body>
 </html>

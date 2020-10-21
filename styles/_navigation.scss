@@ -12,12 +12,14 @@
 }
 
 .navigation__logo {
-	margin: 0 1em;
-	width: 52px;
-	cursor: pointer;
+	padding: 0 0.7em;
+
+	font-size: 1.5rem;
+	font-weight: 700;
 }
 
 .navigation__list {
+	flex-grow: 1;
 	display: flex;
 	justify-content: flex-end;
 
@@ -26,10 +28,11 @@
 }
 
 .navigation__item {
-	width: 120px;
-	padding: 1em 1.4em;
+	a {
+		display: block;
+		padding: 1em 1.4em;
+		margin: auto 0;
 
-	cursor: pointer;
-
-	@include hover-bgLighten;
+		@include hover-bgLighten;
+	}
 }

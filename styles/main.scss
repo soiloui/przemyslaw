@@ -2,25 +2,30 @@
 @import 'header';
 @import 'navigation';
 @import 'about';
+@import 'cooperate';
+@import 'training';
 @import 'opinions';
-@import '_bgAnim';
 @import 'contact';
 
 section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	min-height: 90vh;
+
+	font-size: 1.3rem;
 
 	h2 {
 		padding: 1em;
-		font-size: 2.2rem;
+		font-size: 2.6rem;
+		text-align: center;
+		text-transform: capitalize;
 	}
 }
 
 .main-wrapper {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 
 	width: 80%;
@@ -28,14 +33,52 @@ section {
 	z-index: 1;
 
 	text-align: justify;
-	h2 {
-		text-transform: capitalize;
+}
+
+.primary-button {
+	position: relative;
+	padding: 0.7em 1.2em;
+
+	font-size: inherit;
+	border: none;
+	border-radius: 5px;
+
+	overflow: hidden;
+	cursor: pointer;
+
+	&--blue {
+		color: $col-one;
+		background: $col-two;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 120%;
+		height: 100%;
+
+		transform: skewX(15deg) translateX(-120%);
+		transition: 0.5s transform cubic-bezier(0.49, 1.19, 0.62, -0.35);
+
+		background: rgba($col-thr, 0.3);
+	}
+
+	span {
+		position: relative;
+	}
+
+	&:hover {
+		&::before {
+			transform: skewX(15deg) translateX(-10%);
+		}
 	}
 }
 
 .section-arrow {
 	position: absolute;
-	bottom: 1em;
+	bottom: 20px;
 
 	font-size: 2.5rem;
 	color: rgba(#fff, 0.3);

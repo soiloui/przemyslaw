@@ -1,3 +1,5 @@
+@import '_bgAnim';
+
 .opinions {
 	position: relative;
 	color: $col-one;
@@ -24,6 +26,8 @@
 	h3 {
 		margin-top: 1em;
 		margin-bottom: 0.5em;
+
+		font-size: 1.5rem;
 		text-transform: capitalize;
 	}
 }
