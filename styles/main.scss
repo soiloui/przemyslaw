@@ -71,8 +71,9 @@ section {
 		background: $col-two;
 	}
 	&--white {
-		color: $col-two;
-		background: $col-one;
+		color: #fff;
+		background: transparent;
+		border: 2px solid #fff;
 	}
 
 	&::before {
