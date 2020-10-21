@@ -7,6 +7,26 @@
 @import 'opinions';
 @import 'contact';
 
+::-webkit-scrollbar {
+	width: 10px;
+	height: 18px;
+}
+::-webkit-scrollbar-thumb {
+	height: 6px;
+	border-left: 1px solid #fff;
+	background-clip: padding-box;
+	background-color: $col-two;
+}
+
+::-webkit-scrollbar-button {
+	width: 0;
+	height: 0;
+	display: none;
+}
+::-webkit-scrollbar-corner {
+	background-color: transparent;
+}
+
 section {
 	display: flex;
 	flex-direction: column;
