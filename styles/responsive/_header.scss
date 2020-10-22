@@ -6,6 +6,14 @@
 		.primary-button {
 			margin-top: 70px;
 		}
+
+		.group-move {
+			order: 1;
+
+			&--next {
+				order: 2;
+			}
+		}
 	}
 	h1 {
 		padding: 0;
@@ -17,21 +25,13 @@
 	}
 
 	.text-box {
-		min-height: fit-content;
+		min-height: 300px;
 		flex-flow: row wrap;
 	}
 	.text-box__content {
 		padding: 1em;
 		height: 300px;
 		font-size: 1.4rem;
-	}
-
-	.text-box__move {
-		order: 1;
-
-		&--next {
-			order: 2;
-		}
 	}
 }
 @media (min-width: 600px) and (max-width: 1200px) {

@@ -33,9 +33,20 @@ header {
 		margin-top: 40px;
 		font-size: 1.1rem;
 	}
+
+	.group-move {
+		margin: 1em;
+
+		color: rgba($col-one, 0.3);
+
+		&:hover {
+			color: rgba(#fff, 0.7);
+		}
+	}
 }
 
 h1 {
+	position: relative;
 	padding-top: 1.8em;
 	padding-bottom: 1em;
 
@@ -52,34 +63,14 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 350px;
+	height: 380px;
 	max-width: 900px;
-}
-
-.text-box__move {
-	margin: 1em;
-
-	transform: rotate(90deg);
-	transition: color 0.24s ease-out;
-	cursor: pointer;
-
-	font-size: 2.5rem;
-	color: rgba($col-one, 0.3);
-	border-radius: 50%;
-
-	&--next {
-		transform: rotate(-90deg);
-	}
-
-	&:hover {
-		color: rgba(#fff, 0.7);
-	}
 }
 
 .text-box__content {
 	padding: 1.5em 2em;
 	width: auto;
-	max-height: 330px;
+	max-height: 300px;
 
 	text-align: justify;
 	font-size: 1.5rem;

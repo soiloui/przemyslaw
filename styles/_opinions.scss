@@ -1,5 +1,6 @@
 .opinions {
 	position: relative;
+	padding-bottom: 100px;
 	color: $col-two;
 	background-image: url('../assets/img/training/alexander-redl.jpg');
 	background-size: cover;
@@ -30,10 +31,27 @@
 
 		background: rgba($col-thr, 0.1);
 	}
+
+	.main-wrapper {
+		flex-direction: row;
+		justify-content: space-between;
+		width: 90%;
+	}
+
+	.group-move {
+		margin: 0em;
+
+		color: $col-two;
+
+		&:hover {
+			color: rgba($col-thr, 0.6);
+		}
+	}
 }
 .opinions-wrapper {
 	display: flex;
 	flex-flow: row wrap;
+	align-items: center;
 	justify-content: space-between;
 }
 
@@ -45,6 +63,10 @@
 	&--active {
 		display: flex;
 	}
+
+	& > :nth-child(-n + 2) {
+		margin-bottom: 100px;
+	}
 }
 
 .opinion {
@@ -52,7 +74,6 @@
 	flex-direction: column;
 	align-items: center;
 	padding: 1em;
-	margin-bottom: 100px;
 	width: 45%;
 	height: 450px;
 

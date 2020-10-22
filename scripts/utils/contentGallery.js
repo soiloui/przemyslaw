@@ -1,28 +1,18 @@
-import { changeListener } from './utils/changeListener.js';
-import { ADD, REMOVE } from './utils/constans.js';
-const opinions = () => {
-	const groupMove_DIVs = document.querySelectorAll('.text-box__move');
+import { changeListener } from './changeListener.js';
+import { ADD, REMOVE } from './constans.js';
 
-	const groupsWrapper_DIV = document.querySelector('.opinions-wrapper');
-	const itemsQuantity = groupsWrapper_DIV.children.length - 1;
+const contentGallery = (
+	section,
+	wrapper,
+	classDisplaysGroup,
+	autoChangeDuration
+) => {
+	const groupMove_DIVs = section.querySelectorAll('.group-move');
+
+	const itemsQuantity = wrapper.children.length - 1;
 	let actualGroup = 0;
 	let prevGroup = actualGroup;
 	let autoChangeInterval;
-
-	// Interval of automatic change acutal visible group
-	const autoChangeActiveGroup = () => {
-		autoChangeInterval = setInterval(() => {
-			prevGroup = actualGroup;
-			if (actualGroup < itemsQuantity) {
-				actualGroup++;
-			} else {
-				actualGroup = 0;
-			}
-
-			groupChange();
-		}, 5000);
-	};
-	autoChangeActiveGroup();
 
 	// ---- Change displayed group ----
 	// change acutalGroup variable
@@ -32,7 +22,7 @@ const opinions = () => {
 			autoChangeActiveGroup();
 			prevGroup = actualGroup;
 
-			if (e.target.classList.contains('text-box__move--next')) {
+			if (e.target.classList.contains('group-move--next')) {
 				if (actualGroup < itemsQuantity) {
 					actualGroup++;
 				} else {
@@ -48,23 +38,19 @@ const opinions = () => {
 		}
 
 		// changes during 1 frame of animation
-		const textBoxFrame = () => {
+		const animationFrame = () => {
 			if (phase === 0) {
 				if (boxOpacity > 0) {
 					boxOpacity -= frameOpacityChange;
-					groupsWrapper_DIV.style.opacity = boxOpacity;
+					wrapper.style.opacity = boxOpacity;
 				} else {
-					groupsWrapper_DIV.children[prevGroup].classList.remove(
-						'opinion-group--active'
-					);
-					groupsWrapper_DIV.children[actualGroup].classList.add(
-						'opinion-group--active'
-					);
+					wrapper.children[prevGroup].classList.remove(classDisplaysGroup);
+					wrapper.children[actualGroup].classList.add(classDisplaysGroup);
 					phase = 1;
 				}
 			} else if (phase === 1 && boxOpacity < 1) {
 				boxOpacity += frameOpacityChange;
-				groupsWrapper_DIV.style.opacity = boxOpacity;
+				wrapper.style.opacity = boxOpacity;
 			} else {
 				clearInterval(boxAnimateInterval);
 			}
@@ -75,7 +61,7 @@ const opinions = () => {
 		let phase = 0;
 		const frameTime = 30;
 		const frameOpacityChange = 0.05;
-		const boxAnimateInterval = setInterval(textBoxFrame, frameTime);
+		const boxAnimateInterval = setInterval(animationFrame, frameTime);
 
 		// remove click listener until animation ends
 		changeListener(REMOVE, groupMove_DIVs, groupChange);
@@ -83,6 +69,21 @@ const opinions = () => {
 			changeListener(ADD, groupMove_DIVs, groupChange);
 		}, frameTime * 2 * (100 / (frameOpacityChange * 100)));
 	};
+
+	// Interval of automatic change acutal visible group
+	const autoChangeActiveGroup = () => {
+		autoChangeInterval = setInterval(() => {
+			prevGroup = actualGroup;
+			if (actualGroup < itemsQuantity) {
+				actualGroup++;
+			} else {
+				actualGroup = 0;
+			}
+
+			groupChange();
+		}, autoChangeDuration);
+	};
+	autoChangeActiveGroup();
 
 	// Default set click listener to active
 	changeListener(ADD, groupMove_DIVs, groupChange);
@@ -97,4 +98,4 @@ const opinions = () => {
 	});
 };
 
-export { opinions };
+export { contentGallery };
