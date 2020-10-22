@@ -1,6 +1,6 @@
 const scrollReveals = () => {
 	ScrollReveal({
-		delay: 200,
+		delay: 260,
 		duration: 1500,
 		distance: '100px',
 		opacity: 0,
@@ -12,7 +12,6 @@ const scrollReveals = () => {
 	ScrollReveal().reveal('.main-wrapper');
 	ScrollReveal().reveal('.sidebyside__item');
 	ScrollReveal().reveal('.coop-group');
-	ScrollReveal().reveal('.opinion');
 	ScrollReveal().reveal('.contact-link');
 };
 

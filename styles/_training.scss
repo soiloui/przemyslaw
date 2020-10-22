@@ -2,34 +2,7 @@
 	position: relative;
 	padding-bottom: 2em;
 
-	color: $col-two;
-	background-image: url('../assets/img/training/alexander-redl.jpg');
-	background-size: cover;
-	background-position: center;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-
-		background: rgba(#fff, 0.8);
-	}
-
-	&::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 40%;
-		height: 100%;
-
-		transform: skewX(15deg);
-
-		background: rgba($col-thr, 0.1);
-	}
+	color: $col-one;
 
 	.main-wrapper {
 		flex-grow: 1;
