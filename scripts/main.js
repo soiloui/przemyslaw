@@ -1,3 +1,5 @@
+'use strict';
+
 import { textBox } from './textBox.js';
 import { opinions } from './opinions.js';
 import { scrollReveals } from './scrollReveals.js';

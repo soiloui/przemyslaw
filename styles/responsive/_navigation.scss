@@ -2,7 +2,7 @@
 	.navigation {
 		flex-direction: column;
 		justify-content: flex-start;
-		height: 100vh;
+		min-height: 100vh;
 
 		transform: translateX(100%);
 		transition: transform 0.45s ease-out;
