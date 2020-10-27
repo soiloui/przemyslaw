@@ -27,6 +27,29 @@ $col-two: #003049;
 $col-one: #fff;
 $col-thr: #00a6fb;
 
+@mixin lightScroll($color: $col-two, $alpha: 0.85) {
+	&::-webkit-scrollbar {
+		width: 14px;
+		height: 18px;
+	}
+	&::-webkit-scrollbar-thumb {
+		height: 6px;
+		border: 5px solid rgba(0, 0, 0, 0);
+		background-clip: padding-box;
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		background-color: rgba($color, $alpha);
+	}
+
+	&::-webkit-scrollbar-button {
+		width: 0;
+		height: 0;
+		display: none;
+	}
+	&::-webkit-scrollbar-corner {
+		background-color: transparent;
+	}
+}
 @mixin hover-bgLighten($alpha: 0.3) {
 	transition: background 0.25s ease-out;
 	&:hover {

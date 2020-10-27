@@ -16,6 +16,17 @@
 	left: 0;
 	background: #003049;
 	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(#003049, 0.5);
+		z-index: 1;
+	}
 }
 
 .background span {
@@ -28,6 +39,8 @@
 	animation-duration: 45;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
+
+	z-index: 0;
 }
 
 .background span:nth-child(0) {

@@ -35,7 +35,7 @@ header {
 	}
 
 	.group-move {
-		margin: 1em;
+		margin: 1em 0;
 
 		color: rgba($col-one, 0.3);
 
@@ -64,46 +64,24 @@ h1 {
 	align-items: center;
 	justify-content: space-between;
 	height: 380px;
-	max-width: 900px;
+	max-width: 1100px;
 }
 
 .text-box__content {
-	padding: 1.5em 2em;
+	padding: 0 2em;
 	width: auto;
 	max-height: 300px;
 
 	text-align: justify;
 	font-size: 1.5rem;
-	color: $col-two;
-	background: rgba($col-one, 0.6);
-	border-radius: 5px;
-
-	overflow-y: auto;
-
-	&::-webkit-scrollbar {
-		width: 24px;
-		height: 18px;
-	}
-	&::-webkit-scrollbar-thumb {
-		height: 6px;
-		border: 9px solid rgba(0, 0, 0, 0);
-		background-clip: padding-box;
-		border-radius: 10px;
-		-webkit-border-radius: 10px;
-		background-color: rgba($col-two, 0.85);
-	}
-
-	&::-webkit-scrollbar-button {
-		width: 0;
-		height: 0;
-		display: none;
-	}
-	&::-webkit-scrollbar-corner {
-		background-color: transparent;
-	}
+	color: $col-one;
 }
 .text-box__item {
+	max-height: inherit;
 	display: none;
+	overflow-y: auto;
+
+	@include lightScroll(#fff, 0.5);
 }
 .text-box__item--active {
 	display: block;

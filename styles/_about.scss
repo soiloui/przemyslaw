@@ -32,10 +32,22 @@
 
 .sidebyside__text {
 	width: 45%;
+
+	max-height: 300px;
+	overflow-y: auto;
+
+	@include lightScroll;
+
+	&::-webkit-scrollbar {
+		width: 20px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border: 9px solid rgba(0, 0, 0, 0);
+	}
 }
 .sidebyside__image {
 	width: 40%;
-	max-height: 350px;
+	max-height: 450px;
 
 	object-fit: cover;
 	object-position: top center;

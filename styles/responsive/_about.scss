@@ -1,4 +1,4 @@
-@media (min-width: 10px) and (max-width: 600px) {
+@media (min-width: 10px) and (max-width: 800px) {
 	.sidebyside {
 		& > :nth-child(odd) {
 			flex-direction: column-reverse;
@@ -35,7 +35,7 @@
 	}
 }
 
-@media (min-width: 600px) and (max-width: 1200px) {
+@media (min-width: 800px) and (max-width: 1200px) {
 	.sidebyside__item {
 		margin-bottom: 120px;
 	}
